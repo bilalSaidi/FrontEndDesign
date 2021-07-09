@@ -1,0 +1,68 @@
+body{
+    box-sizing: border-box;
+    font-size: 16px;
+}
+h2{
+    width:150px;
+    margin: 0 auto;
+}
+.initial_pizzle , .final_pizzle{
+    width: 200px;
+    height: 200px;
+    border: 5px solid black;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+
+.item{
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: indigo;
+    color: #fff;
+    font-size: 2rem;
+}
+.item9{
+    background-color: lemonchiffon;
+}
+
+/* chalange is to get The correct order using css grid without touching the html*/
+.final_pizzle .item1{
+    grid-row-start:1 ;
+
+}
+.final_pizzle .item2,.final_pizzle .item3{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.final_pizzle .item2{
+    
+    grid-column-start:2 ;
+    grid-column-end: 3;
+}
+.final_pizzle .item3{
+    
+    grid-column-start:3;
+    grid-column-end: 4;
+}
+.final_pizzle .item4,.final_pizzle .item5{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.final_pizzle .item4{
+    
+    grid-column-start:1;
+    grid-column-end: 2;
+}
+
+.final_pizzle .item6{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.final_pizzle .item7{
+     grid-row-start: 3;
+    grid-row-end: 4;
+}
